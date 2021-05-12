@@ -26,14 +26,14 @@ int main() {
     // porzadkowa = new int [ROZMIAR];
 
     
+// Tablice pomocnicze to sortowania przez scalanie
+//     int *pomocnicza;
+//     pomocnicza = new int [ROZMIAR];
 
-    int *pomocnicza;
-    pomocnicza = new int [ROZMIAR];
+//     string *pomocnicza1;
+//     pomocnicza1 = new string [ROZMIAR];
 
-    string *pomocnicza1;
-    pomocnicza1 = new string [ROZMIAR];
-
-    clock_t start , stop;
+    clock_t start , stop;                    //Zmienne potrzebne to pomiaru czasu sortowania
     double czas;
 
     fstream plik;
@@ -64,7 +64,7 @@ int main() {
     
     plik.close();
 
-    start = clock();
+    start = clock();                                                //Wywolywanie funkcji
     //quicksort(sort , 0 , numer - 1 );
     scalanie(sort , pomocnicza , pomocnicza1 ,0, numer -1);
     //kubelkowe( sort , numer , 0 , 11);
@@ -72,7 +72,7 @@ int main() {
     stop = clock();
 
     fstream plik2;
-    plik2.open("/home/kacper/Pulpit/Lab2_Pamsi12/wynik.txt" , ios::out);
+    plik2.open("/home/kacper/Pulpit/Lab2_Pamsi12/wynik.txt" , ios::out);         //Zapis posortowanych danych do pliku
 
 
     cout << "Ilość tytułów :  " << numer << endl;       //Wyświetlanie zawartości tablic
